@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitleBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngân sách"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTotalThu"
+        android:layout_below="@id/tvTitleBudget"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng thu: 0"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnToggleInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="18sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tvTitleBudget" />
+
+    <TextView
+        android:id="@+id/tvTotalChi"
+        android:layout_below="@id/tvTotalThu"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng chi: 0"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutInputBudget"
+        android:layout_below="@id/tvTotalChi"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtBudgetChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Nhập ngân sách chi tháng" />
+
+        <Button
+            android:id="@+id/btnSaveBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu ngân sách"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBudgetSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalChi"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="173dp"
+        android:text="Ngân sách hiện tại: 0"
+        android:textColor="#FF0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvWarningChiVuotNganSach"
+        android:layout_below="@id/tvTotalChi"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chi tiêu đã vượt ngân sách!"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
